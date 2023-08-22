@@ -153,7 +153,6 @@ h6 {
 .card {
   display: flex;
   flex-direction: column;
-  width: clamp(20rem, calc(20rem + 2vw), 22rem);
   overflow: hidden;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 1em;
@@ -210,6 +209,10 @@ h6 {
 .card-title {
   font-size: 1.3rem;
   line-height: 1.4rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .card-date {
   font-size: 11px;
