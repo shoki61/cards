@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masonry Gallery</title>
+    <link rel="stylesheet" href="./full_width_gallery.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="advanced-media-boxes">
+      <p class="title mt-sm">FULL WIDTH GALLERY</p>
+      <p class="mt-xs sub-title">
+        Take advantage of the all the width available.
+      </p>
+      <div class="container m-auto">
+        <div class="flex justify-between m-auto mt-md flex-wrap">
+          <div class="flex flex-wrap justify-center w-full mb-xs">
+            <button
+              class="btn btn-category"
+              id="category-all"
+              onclick="filterCategories('all')"
+            >
+              All
+            </button>
+            <button
+              class="btn btn-category"
+              id="category-photography"
+              onclick="filterCategories('photography')"
+            >
+              Photography
+            </button>
+            <button
+              class="btn btn-category"
+              id="category-nature"
+              onclick="filterCategories('nature')"
+            >
+              Nature
+            </button>
+            <button
+              class="btn btn-category"
+              id="category-outside"
+              onclick="filterCategories('outside')"
+            >
+              Outside
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-wrap" id="card-container">
+          <div class="card bg-white" data-categories="all life">
+            <div class="card-image-container relative">
+              <img
+                class="card-image"
+                alt="blog-image"
+                src="https://images.unsplash.com/photo-1615920292087-6d9f818e9e13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbCUyMGJlYXV0eXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+              />
+              <div class="overlay absolute flex items-center justify-center">
+                <button
+                  id="overlay-zoom-btn"
+                  onclick="show(`https://images.unsplash.com/photo-1615920292087-6d9f818e9e13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbCUyMGJlYXV0eXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80`)"
+                  class="btn overlay-btn text-center"
+                >
+                  <h2 class="card-title text-center mb-xxs">
+                    1 Lorem ipsum dolor sit amet
+                  </h2>
+                  <p class="card-date text-center">21 Ağustos, 2023</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white" data-categories="all photography">
+            <div class="card-image-container relative">
+              <img
+                class="card-image"
+                alt="blog-image"
+                src="https://www.indiafilings.com/learn/wp-content/uploads/2019/06/Zero-Budget-National-Farming.jpg"
+              />
+              <div class="overlay absolute flex items-center justify-center">
+                <button
+                  id="overlay-zoom-btn"
+                  onclick="show(`https://www.indiafilings.com/learn/wp-content/uploads/2019/06/Zero-Budget-National-Farming.jpg`)"
+                  class="btn overlay-btn text-center"
+                >
+                  <h2 class="card-title text-center mb-xxs">
+                    1 Lorem ipsum dolor sit amet
+                  </h2>
+                  <p class="card-date text-center">21 Ağustos, 2023</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white" data-categories="all outside">
+            <div class="card-image-container relative">
+              <img
+                class="card-image"
+                alt="blog-image"
+                src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              />
+              <div class="overlay absolute flex items-center justify-center">
+                <button
+                  id="overlay-zoom-btn"
+                  onclick="show(`https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80`)"
+                  class="btn overlay-btn text-center"
+                >
+                  <h2 class="card-title text-center mb-xxs">
+                    1 Lorem ipsum dolor sit amet
+                  </h2>
+                  <p class="card-date text-center">21 Ağustos, 2023</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-white" data-categories="all nature">
+            <div class="card-image-container relative">
+              <img
+                class="card-image"
+                alt="blog-image"
+                src="https://images.unsplash.com/photo-1615920292087-6d9f818e9e13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbCUyMGJlYXV0eXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+              />
+              <div class="overlay absolute flex items-center justify-center">
+                <button
+                  id="overlay-zoom-btn"
+                  onclick="show(`https://images.unsplash.com/photo-1615920292087-6d9f818e9e13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbCUyMGJlYXV0eXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80`)"
+                  class="btn overlay-btn text-center"
+                >
+                  <h2 class="card-title text-center mb-xxs">
+                    1 Lorem ipsum dolor sit amet
+                  </h2>
+                  <p class="card-date text-center">21 Ağustos, 2023</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="moda-tool absolute">
+        <button id="modal-close-btn" class="btn modal-btn">×</button>
+      </div>
+      <div class="modal-image-container">
+        <img class="modal-image" id="modal-image" alt="modal-image" />
+      </div>
+    </div>
+
+    <script>
+      const show = (url) => {
+        const modalImage = document.getElementById("modal-image");
+        modalImage.src = url;
+        $("#modal").show();
+      };
+
+      $("#modal-close-btn").click(function () {
+        $("#modal").hide();
+      });
+
+      feather.replace();
+
+      const filterCategories = (category) => {
+        const cards = document.querySelectorAll(".card");
+        ["all", "photography", "indoors", "nature", "outside", "life"].map(
+          (item) => {
+            if (item == category) {
+              $(`#category-${category}`).css({
+                color: "coral",
+              });
+            } else if (item !== category) {
+              $(`#category-${item}`).css({
+                color: "#888",
+              });
+            }
+            return item;
+          }
+        );
+
+        $(".card").each(function () {
+          const categories = $(this).data("categories")?.split(" ");
+          if (categories.includes(category) || category === "all") {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      };
+      (() => {
+        $(`#category-all`).css({
+          color: "coral",
+        });
+      })();
+    </script>
+  </body>
+</html>
