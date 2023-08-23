@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clients</title>
+    <link rel="stylesheet" href="./clients.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="advanced-media-boxes">
+      <p class="title mt-sm">YOUR CLIENTS</p>
+      <p class="mt-xs sub-title">
+        Show your clients in a grid and filter them with an input search field.
+      </p>
+      <div class="container m-auto">
+        <div class="flex justify-center m-auto mt-md flex-wrap">
+          <div class="flex items-stretch mb-xs">
+            <div class="search-container flex items-stretch">
+              <input
+                oninput="search()"
+                id="search-input"
+                placeholder="Search"
+                class="search-input"
+              />
+              <button class="btn search-clear-btn" onclick="clearSearch()">
+                ×
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap" id="card-container">
+          <div class="card bg-white" data-categories="all category_1">
+            <div
+              class="card-image-container flex items-center justify-center relative"
+            >
+              <i class="fab fa-html5 card-icon" style="color: #f47721"></i>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">1 Lorem ipsum dolor sit amet</h2>
+              <p class="card-description mt-xxs">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-white" data-categories="all category_1">
+            <div
+              class="card-image-container flex items-center justify-center relative"
+            >
+              <i class="fab fa-wordpress card-icon" style="color: #505050"></i>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">1 Lorem ipsum dolor sit amet</h2>
+              <p class="card-description mt-xxs">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-white" data-categories="all category_1">
+            <div
+              class="card-image-container flex items-center justify-center relative"
+            >
+              <i class="fab fa-css3-alt card-icon" style="color: #428bca"></i>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">1 Lorem ipsum dolor sit amet</h2>
+              <p class="card-description mt-xxs">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-white" data-categories="all category_1">
+            <div
+              class="card-image-container flex items-center justify-center relative"
+            >
+              <i class="fas fa-rocket card-icon" style="color: #6cbc35"></i>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">1 Lorem ipsum dolor sit amet</h2>
+              <p class="card-description mt-xxs">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-white" data-categories="all category_1">
+            <div
+              class="card-image-container flex items-center justify-center relative"
+            >
+              <i class="fas fa-shield-alt card-icon" style="color: #e74c3c"></i>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">1 Lorem ipsum dolor sit amet</h2>
+              <p class="card-description mt-xxs">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const search = () => {
+        const input = document.getElementById("search-input");
+        $(".card").each(function () {
+          if (!$(this).find(".card-title").text().includes(input.value)) {
+            $(this).hide();
+          } else {
+            $(this).show();
+          }
+        });
+      };
+
+      const clearSearch = () => {
+        const input = document.getElementById("search-input");
+        input.value = "";
+        $(".card").each(function () {
+          $(this).show();
+        });
+      };
+
+      feather.replace();
+    </script>
+  </body>
+</html>
