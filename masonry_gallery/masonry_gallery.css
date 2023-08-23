@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+  background-color: #f5f6fa;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Quicksand";
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.mt-xs {
+  margin-top: 30px;
+}
+.mt-sm {
+  margin-top: 50px;
+}
+.mt-md {
+  margin-top: 70px;
+}
+.mt-lg {
+  margin-top: 100px;
+}
+.mt-xl {
+  margin-top: 140px;
+}
+
+.mb-xxs {
+  margin-bottom: 10px;
+}
+
+.mb-xs {
+  margin-bottom: 30px;
+}
+.mb-sm {
+  margin-bottom: 50px;
+}
+.mb-md {
+  margin-bottom: 70px;
+}
+.mb-lg {
+  margin-bottom: 100px;
+}
+.mb-xl {
+  margin-bottom: 140px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.title {
+  font-size: 35px;
+  color: #444;
+  font-weight: 600;
+}
+.sub-title {
+  color: #666;
+  font-size: 17px;
+}
+
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.items-end {
+  align-items: end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn-category {
+  margin-right: 5px;
+  color: #888;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.btn-category:hover {
+  color: #444;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.px-sm {
+  padding-inline: 30px;
+}
+
+.m-auto {
+  margin-inline: auto;
+}
+
+.container {
+  width: 90vw;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.7em;
+  width: 280px;
+  height: 330px;
+  margin: 10px;
+}
+.card:hover .card-image {
+  transform: scale(1.3);
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease-in-out;
+}
+.card-image-container {
+  height: 100%;
+}
+
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay:hover .card-date {
+  transform: translateY(0px);
+}
+
+.overlay:hover .card-title {
+  transform: translateY(0px);
+}
+
+.overlay-btn {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-weight: 500;
+  transform: translateY(-30px);
+}
+.card-date {
+  font-size: 13px;
+  margin-block: 5px;
+  font-style: italic;
+  transform: translateY(30px);
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.modal-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-image {
+  width: 100%;
+  max-height: 90%;
+  object-fit: contain;
+}
+.moda-tool {
+  z-index: 100;
+  top: 0;
+  right: 0;
+}
+.modal-btn {
+  width: 60px;
+  height: 50px;
+  background-color: #333;
+  font-size: 20px;
+  color: #fff;
+}
+.modal-btn:hover {
+  background-color: #222;
+}
+.text-center {
+  text-align: center;
+}
