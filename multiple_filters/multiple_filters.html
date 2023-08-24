@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MULTIPLE FILTERS</title>
+    <link rel="stylesheet" href="./multiple_filters.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="advanced-media-boxes">
+      <p class="title mt-sm">MULTIPLE FILTERS</p>
+      <p class="mt-xs sub-title">Apply multiple filters at once.</p>
+      <div class="container m-auto">
+        <div class="flex justify-between m-auto mt-md flex-wrap">
+          <div class="flex flex-wrap mb-xs">
+            <div class="flex dropdown relative">
+              <div class="flex-1 flex items-center">
+                <p id="dropdown-selected-color">All</p>
+              </div>
+              <div class="flex items-center">
+                <i class="dropdown-icon" data-feather="chevron-down"></i>
+              </div>
+              <div class="absolute dropdown-option">
+                <button onclick="onChangeDropdown('color', 'All', 'border')"  class="btn dropdown-opition-button">
+                  All
+                </button>
+                <button onclick="onChangeDropdown('color', 'Red', 'border')"  class="btn dropdown-opition-button">
+                  Red
+                </button>
+                <button onclick="onChangeDropdown('color', 'White', 'border')" class="btn dropdown-opition-button">
+                  White
+                </button>
+                <button onclick="onChangeDropdown('color', 'Blue', 'border')" class="btn dropdown-opition-button">
+                  Blue
+                </button>
+              </div>
+            </div>
+            <div class="flex dropdown relative">
+              <div class="flex-1 flex items-center">
+                <p id="dropdown-selected-border">All</p>
+              </div>
+              <div class="flex items-center">
+                <i class="dropdown-icon" data-feather="chevron-down"></i>
+              </div>
+              <div class="absolute dropdown-option">
+                <button onclick="onChangeDropdown('border', 'All', 'color')" class="btn dropdown-opition-button">
+                  All
+                </button>
+                <button onclick="onChangeDropdown('border', 'Round', 'color')"  class="btn dropdown-opition-button">
+                  Round
+                </button>
+                <button onclick="onChangeDropdown('border', 'Square', 'color')" class="btn dropdown-opition-button">
+                  Square
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-stretch mb-xs">
+            <div class="search-container flex items-stretch">
+              <input
+                oninput="search()"
+                id="search-input"
+                placeholder="Search"
+                class="search-input"
+              />
+              <button class="btn search-clear-btn" onclick="clearSearch()">
+                ×
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap" id="card-container">
+          <div
+            class="card bg-white flex items-center justify-center bg-red"
+            data-categories="all red 1 square"
+          >
+            <p class="card-title">1</p>
+          </div>
+          <div
+            class="card bg-white flex items-center justify-center full-radius"
+            data-categories="all white 2 round"
+          >
+            <p class="card-title">2</p>
+          </div>
+          <div
+            class="card bg-white flex items-center justify-center bg-blue"
+            data-categories="all blue 3 square"
+          >
+            <p class="card-title">3</p>
+            
+        </div>
+        <div
+            class="card bg-white flex items-center justify-center bg-red full-radius"
+            data-categories="all red 4 round"
+          >
+            <p class="card-title">4</p>
+          </div>
+           <div
+            class="card bg-white flex items-center justify-center bg-red full-radius"
+            data-categories="all red 5 round"
+          >
+            <p class="card-title">5</p>
+          </div>
+      </div>
+    </div>
+
+    <script>
+      feather.replace();
+
+      const search = () => {
+        const input = document.getElementById("search-input");
+        $(".card").each(function () {
+          const categories = $(this).data("categories")?.split(" ");
+          if ($(this).find(".card-title").text().includes(input.value) && categories.includes($('#dropdown-selected-border').text().toLowerCase())&&categories.includes($('#dropdown-selected-color').text().toLowerCase())) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      };
+
+      const clearSearch = () => {
+        const input = document.getElementById("search-input");
+        input.value = "";
+        $(".card").each(function () {
+          $(this).show();
+        });
+      };
+
+      const onChangeDropdown = (dropdownType, value, controlDropdown) => {
+        const input = document.getElementById("search-input");
+        $(`#dropdown-selected-${dropdownType}`).text(value)
+        $(".card").each(function () {
+          const categories = $(this).data("categories")?.split(" ");
+          let inputControl = input.value?.length > 0 ? $(this).find(".card-title").text().includes(input.value): true
+          if (categories.includes(value?.toLowerCase()) &&  (categories.includes($(`#dropdown-selected-${controlDropdown}`).text().toLowerCase()) || $(`#dropdown-selected-${controlDropdown}`).text() == 'All') && inputControl) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

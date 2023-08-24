@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+  background-color: #f5f6fa;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Quicksand";
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.mt-xs {
+  margin-top: 30px;
+}
+.mt-sm {
+  margin-top: 50px;
+}
+.mt-md {
+  margin-top: 70px;
+}
+.mt-lg {
+  margin-top: 100px;
+}
+.mt-xl {
+  margin-top: 140px;
+}
+
+.mb-xs {
+  margin-bottom: 30px;
+}
+.mb-sm {
+  margin-bottom: 50px;
+}
+.mb-md {
+  margin-bottom: 70px;
+}
+.mb-lg {
+  margin-bottom: 100px;
+}
+.mb-xl {
+  margin-bottom: 140px;
+}
+
+.title {
+  font-size: 35px;
+  color: #444;
+  font-weight: 600;
+}
+.sub-title {
+  color: #666;
+  font-size: 17px;
+}
+
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.items-end {
+  align-items: end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn-category {
+  border: 1px solid #ddd;
+  padding-inline: 15px;
+  padding-block: 10px;
+  margin-right: 5px;
+  border-radius: 99px;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.btn-category:hover {
+  background-color: coral;
+  border-color: coral;
+  color: #fff;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.px-sm {
+  padding-inline: 30px;
+}
+
+.m-auto {
+  margin-inline: auto;
+}
+
+.container {
+  width: 90vw;
+}
+.search-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding-left: 15px;
+  padding-right: 5px;
+  border-radius: 555px;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-clear-btn {
+  font-size: 20px;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  width: 32%;
+  aspect-ratio: 1;
+  max-width: 275px;
+  margin: 0 0.5%;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+
+.full-radius {
+  border-radius: 999px;
+}
+
+.bg-blue {
+  background-color: rgb(91, 91, 219);
+  color: #fff;
+}
+
+.bg-red {
+  background-color: rgb(250, 35, 118);
+  color: #fff;
+}
+
+.dropdown {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 5px 10px;
+  min-width: 150px;
+  max-width: 250px;
+  z-index: 200;
+  margin-right: 7px;
+}
+.flex-1 {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dropdown-icon {
+  width: 20px;
+  height: 20px;
+}
+.dropdown-option {
+  top: 100%;
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+}
+
+.dropdown-opition-button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top-width: 0;
+  text-align: left;
+  color: #555;
+  font-weight: 400;
+  font-size: 13px;
+  display: none;
+}
+
+.dropdown-opition-button:first-child {
+  border-top-width: 1px;
+}
+.dropdown-opition-button:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-opition-button {
+  display: block;
+}
